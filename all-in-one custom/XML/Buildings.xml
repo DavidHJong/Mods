@@ -1,0 +1,769 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation ="OrientalEmpires Buildings.xsd">
+  
+  <!-- In settlement buildings /////////////////////////////////////////////////////////////////-->
+
+  <!-- Palaces -->
+  <Building ID="Palace" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl1"/>
+	    <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl1"/>
+      <Prefab Style="Nomad" Name ="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Ordo"/>
+    </Model>
+    <Construction Cost="1000" SackValue="1500" MinTurns="3" Upkeep="30" CardIcon="G_BuildingIcon_PalaceLvl1_01" CardMinorIcon="G_Icon12x12_Palace_01"/>
+    <Requirements>
+      <Population Num="10"/>
+    </Requirements>
+    <Capability Name="Recruit Nobles" Level="1"/>
+    <Capability Name="Recruit Militia" Level="1"/>
+    <Capability Name ="Recruit Palace Troops" Level="1"/>
+    <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Palace II" InSettlement="true" Upgrades="Palace">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl2"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl2"/>
+    </Model>
+    <Construction Cost="2000" SackValue="3000" MinTurns="6" Upkeep="80" CardIcon="G_BuildingIcon_PalaceLvl2_01" CardMinorIcon="G_Icon12x12_Palace_01"/>
+    <Capability Name="Recruit Nobles" Level="2"/>
+    <Capability Name="Recruit Militia" Level="1"/>
+    <Capability Name ="Recruit Palace Troops" Level="2"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  <Building ID="Palace III" InSettlement="true" Upgrades="Palace II">
+    <Model SlotSize="3" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl3"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl3"/>
+    </Model>
+    <Construction Cost="4000" SackValue="6000" MinTurns="8" Upkeep="250" CardIcon="G_BuildingIcon_PalaceLvl3_01" CardMinorIcon="G_Icon12x12_Palace_01"/>
+    <Capability Name="Recruit Nobles" Level="3"/>
+    <Capability Name="Recruit Militia" Level="2"/>
+    <Capability Name ="Recruit Palace Troops" Level="4"/>
+    <Capability Name="Culture VP" Level="4"/>
+  </Building>
+
+  <!-- Temples -->
+  <Building ID="Buddhist Temple" InSettlement="true" Tags="Buddhist"> 
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTemple_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="750" MinTurns="2" Upkeep="50" CardIcon="G_BuildingIcon_TempleBuddhistLvl1_01" CardMinorIcon="G_Icon12x12_TempleBuddhist_01"/>
+    <Requirements>
+      <Population Num="8"/>
+      <Tech Item="Buddhism"/>
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="15"/>
+    <Capability Name="Noble Happiness" Level="5"/>
+    <Capability Name="Boost Thought" Level="10"/>
+    <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Buddhist Temple II" InSettlement="true" Upgrades="Buddhist Temple"  Tags="Buddhist">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTemple_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" SackValue="2250" MinTurns="4" Upkeep="85" CardIcon="G_BuildingIcon_TempleBuddhistLvl2_01" CardMinorIcon="G_Icon12x12_TempleBuddhist_01"/>
+    <Capability Name="Peasant Happiness" Level="22"/>
+    <Capability Name="Noble Happiness" Level="7"/>
+    <Capability Name="Boost Thought" Level="20"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  <Building ID="Buddhist Temple III" InSettlement="true" Upgrades="Buddhist Temple II" Tags="Buddhist">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTemple_Lvl3"/>
+    </Model>
+    <Construction Cost="3000" SackValue="4500" MinTurns="6" Upkeep="140" CardIcon="G_BuildingIcon_TempleBuddhistLvl3_01" CardMinorIcon="G_Icon12x12_TempleBuddhist_01"/>
+    <Capability Name="Peasant Happiness" Level="30"/>
+    <Capability Name="Noble Happiness" Level="10"/>
+    <Capability Name="Boost Thought" Level="30"/>
+    <Capability Name="Culture VP" Level="4"/>
+  </Building>
+	<Building ID="Taoist Temple" InSettlement="true" Tags="Taoist">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_TaoistTemple_Lvl1"/>
+    </Model>
+    <Construction Cost="400" SackValue="200" MinTurns="2" Upkeep="35" CardIcon="G_BuildingIcon_TempleTaoistLvl1_01" CardMinorIcon="G_Icon12x12_TempleTaoist_01"/>
+    <Requirements>
+      <Tech Item="Daoism"/>
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10"/>
+    <Capability Name="Noble Unrest" Level="10"/>
+    <Capability Name="Boost Knowledge" Level="15"/>
+    <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Taoist Temple II" InSettlement="true" Upgrades="Taoist Temple" Tags="Taoist">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_TaoistTemple_Lvl2"/>
+    </Model>
+    <Construction Cost="800" SackValue="400" MinTurns="3" Upkeep="60" CardIcon="G_BuildingIcon_TempleTaoistLvl2_01" CardMinorIcon="G_Icon12x12_TempleTaoist_01"/>
+    <Capability Name="Peasant Happiness" Level="15"/>
+    <Capability Name="Noble Unrest" Level="15"/>
+    <Capability Name="Boost Knowledge" Level="22"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  <Building ID="Taoist Temple III" InSettlement="true" Upgrades="Taoist Temple II" Tags="Taoist">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_TaoistTemple_Lvl3"/>
+    </Model>
+    <Construction Cost="1500" SackValue="750" MinTurns="4" Upkeep="100" CardIcon="G_BuildingIcon_TempleTaoistLvl3_01" CardMinorIcon="G_Icon12x12_TempleTaoist_01"/>
+    <Capability Name="Peasant Happiness" Level="20"/>
+    <Capability Name="Noble Unrest" Level="20"/>
+    <Capability Name="Boost Knowledge" Level="30"/>
+    <Capability Name="Culture VP" Level="4"/>
+  </Building>
+	<Building ID="Confucian Temple" InSettlement="true" Tags="Confucian">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ConfucianTemple_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="750" MinTurns="2" Upkeep="65" CardIcon="G_BuildingIcon_TempleConfucianLvl1_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Requirements>
+      <Population Num="8"/>
+      <Tech Item="Confucianism"/>
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10"/>
+    <Capability Name="Noble Happiness" Level="15"/>
+    <Capability Name="Reduce Knowledge" Level="10"/>
+    <Capability Name="Reduce Thought" Level="10"/>
+    <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Confucian Temple II" InSettlement="true" Upgrades="Confucian Temple" Tags="Confucian">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ConfucianTemple_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" SackValue="2250" MinTurns="4" Upkeep="120" CardIcon="G_BuildingIcon_TempleConfucianLvl2_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Capability Name="Peasant Happiness" Level="15"/>
+    <Capability Name="Noble Happiness" Level="22"/>
+    <Capability Name="Reduce Knowledge" Level="15"/>
+    <Capability Name="Reduce Thought" Level="15"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  <Building ID="Confucian Temple III" InSettlement="true" Upgrades="Confucian Temple II" Tags="Confucian">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ConfucianTemple_Lvl3"/>
+    </Model>
+    <Construction Cost="3000" SackValue="4500" MinTurns="6" Upkeep="180" CardIcon="G_BuildingIcon_TempleConfucianLvl3_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Capability Name="Peasant Happiness" Level="20"/>
+    <Capability Name="Noble Happiness" Level="30"/>
+    <Capability Name="Reduce Knowledge" Level="20"/>
+    <Capability Name="Reduce Thought" Level="20"/>
+    <Capability Name="Culture VP" Level="4"/>
+  </Building>
+  
+ <!--  New Islamic building -->
+  	<Building ID="Mosque I" InSettlement="true"  AllowedForHorde="true" Tags="Islamic">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMosque_Lvl1"/>
+      <Prefab Style ="Nomad" Name="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Muslim"/>
+    </Model>
+    <Construction Cost="500" SackValue="500" MinTurns="2" Upkeep="50" CardIcon="G_BuildingIcon_TempleConfucianLvl1_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Requirements>
+      <Tech Item="Islam"/> 
+    </Requirements>
+      <Capability Name="Peasant Happiness" Level="10"/>
+      <Capability Name="Noble Happiness" Level="10"/>
+      <Capability Name="Disaster Medical Care" Level="15"/>
+      <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Mosque II" InSettlement="true" Upgrades="Mosque I" Tags="Islamic">
+    <Model SlotSize="2" TempleSlot="true">
+     <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMosque_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" SackValue="2250" MinTurns="4" Upkeep="100" CardIcon="G_BuildingIcon_TempleConfucianLvl2_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Capability Name="Peasant Happiness" Level="15"/>
+    <Capability Name="Noble Happiness" Level="15"/>
+    <Capability Name="Reduce Thought" Level="15"/>
+    <Capability Name="Disaster Medical Care" Level="25"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  <Building ID="Mosque III" InSettlement="true" Upgrades="Mosque II" Tags="Islamic">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMosque_Lvl3"/>
+    </Model>
+    <Construction Cost="3000" SackValue="4500" MinTurns="6" Upkeep="140" CardIcon="G_BuildingIcon_TempleConfucianLvl3_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Capability Name="Peasant Happiness" Level="20"/>
+    <Capability Name="Noble Happiness" Level="20"/>
+    <Capability Name="Reduce Thought" Level="20"/>
+    <Capability Name="Disaster Medical Care" Level="40"/>
+    <Capability Name="Culture VP" Level="4"/>
+  </Building>
+  
+  <!-- Schools -->
+  <Building ID="Legalist School" InSettlement="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="500" MinTurns="2" Upkeep="70" CardIcon="G_BuildingIcon_LegalistSchoolLvl1_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01"/>
+    <Requirements>
+      <Population Num="8"/>
+      <Tech Item="Legalism"/>
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="5"/>
+    <Capability Name="Increase Tax" Level="15"/>
+    <Capability Name="Boost Power" Level="10"/>
+    <Capability Name="Reduce Thought" Level="10"/>
+    <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Legalist School II" InSettlement="true" Upgrades="Legalist School">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" SackValue="1500" MinTurns="4" Upkeep="100" CardIcon="G_BuildingIcon_LegalistSchoolLvl2_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01"/>
+    <Capability Name="Suppress Peasants" Level="10"/>
+    <Capability Name="Increase Tax" Level="25"/>
+    <Capability Name="Boost Power" Level="15"/>
+    <Capability Name="Reduce Thought" Level="15"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  <Building ID="Legalist School III" InSettlement="true" Upgrades="Legalist School II">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl3"/>
+    </Model>
+    <Construction Cost="3000" SackValue="4500" MinTurns="6" Upkeep="130" CardIcon="G_BuildingIcon_LegalistSchoolLvl3_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01"/>
+    <Capability Name="Suppress Peasants" Level="15"/>
+    <Capability Name="Increase Tax" Level="35"/>
+    <Capability Name="Boost Power" Level="20"/>
+    <Capability Name="Reduce Thought" Level="20"/>
+    <Capability Name="Culture VP" Level="4"/>
+  </Building>
+  <Building ID="Mohist School" InSettlement="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_MohistSchool_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="250" MinTurns="2" Upkeep="40" CardIcon="G_BuildingIcon_MohistSchoolLvl1_01" CardMinorIcon="G_Icon12x12_MohistSchool_01"/>
+    <Requirements>
+      <Population Num="8"/>
+      <Tech Item="Mohism"/>
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="15"/>
+    <Capability Name="Boost Craft" Level="15"/>
+    <Capability Name ="Reduce Thought" Level="10"/>
+    <Capability Name ="Reduce Power" Level="10"/>
+    <Capability Name="Culture VP" Level="1"/>
+  </Building>
+  <Building ID="Mohist School II" InSettlement="true" Upgrades="Mohist School">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_MohistSchool_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" SackValue="750" MinTurns="4" Upkeep="70" CardIcon="G_BuildingIcon_MohistSchoolLvl2_01" CardMinorIcon="G_Icon12x12_MohistSchool_01"/>
+    <Capability Name="Peasant Happiness" Level="22"/>
+    <Capability Name="Boost Craft" Level="22"/>
+    <Capability Name ="Reduce Thought" Level="15"/>
+    <Capability Name ="Reduce Power" Level="15"/>
+    <Capability Name="Culture VP" Level="2"/>
+    <Capability Name ="Recruit Militia" Level="1"/>
+  </Building>
+  <Building ID="Mohist School III" InSettlement="true" Upgrades="Mohist School II">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_MohistSchool_Lvl3"/>
+    </Model>
+    <Construction Cost="3000" SackValue="1500" MinTurns="6" Upkeep="120" CardIcon="G_BuildingIcon_MohistSchoolLvl3_01" CardMinorIcon="G_Icon12x12_MohistSchool_01"/>
+    <Capability Name="Peasant Happiness" Level="30"/>
+    <Capability Name="Boost Craft" Level="30"/>
+    <Capability Name ="Reduce Thought" Level="20"/>
+    <Capability Name ="Reduce Power" Level="20"/>
+    <Capability Name="Culture VP" Level="4"/>
+    <Capability Name ="Recruit Militia" Level="2"/>
+  </Building>
+
+  <!-- Foundry String -->
+  <Building ID ="Foundry" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl1"/>
+    </Model>
+    <Construction Cost="750" MinTurns="3" Upkeep="30" Military ="true" CardIcon="G_BuildingIcon_FoundryLvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01"/>
+    <Requirements>
+      <Tech Item="Bronze Making"/>
+    </Requirements>
+    <Capability Name="Produce Bronze" Level="1"/>
+  </Building>
+  <Building ID ="Iron Foundry" InSettlement="true" Upgrades="Foundry">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl2"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" MinTurns="5" Upkeep="80" Military ="true" CardIcon="G_BuildingIcon_FoundryLvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01"/>
+    <Requirements>
+      <Tech Item="Iron Casting"/>
+    </Requirements>
+    <Capability Name="Produce Iron" Level="1"/>
+  </Building>
+
+  <!-- Armorer string -->
+  <Building ID="Armorer" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1"/>
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="250" MinTurns="2" Upkeep="50" Military ="true" CardIcon="G_BuildingIcon_ArmorerLvl1_01" CardMinorIcon="G_Icon12x12_Armorer_01"/>
+    <Requirements>
+      <Tech Item="Bronze Armor"/>
+    </Requirements>
+    <Capability Name="Recruit Militia" Level="1"/>
+    <Capability Name="Armorer" Level="1"/>    
+  </Building>
+  <Building ID="Armor Works" InSettlement="true" Upgrades="Armorer">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl2"/>
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" SackValue="500" MinTurns="4" Upkeep="60" Military ="true" CardIcon="G_BuildingIcon_ArmorerLvl2_01" CardMinorIcon="G_Icon12x12_Armorer_01"/>
+    <Requirements>
+      <Tech Item="Lamellar Coat"/>
+    </Requirements>
+    <Capability Name="Recruit Militia" Level="1"/>
+    <Capability Name="Armorer" Level="2"/>
+  </Building>
+  <Building ID="Armor Factory" InSettlement="true" Upgrades="Armor Works">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl3"/>
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl3"/>
+    </Model>
+    <Construction Cost="2000" SackValue="1000" MinTurns="6" Upkeep="120" Military ="true" CardIcon="G_BuildingIcon_ArmorerLvl3_01" CardMinorIcon="G_Icon12x12_Armorer_01"/>
+    <Requirements>
+      <Building ID="Foundry"/>
+      <Tech Item="Iron Armor"/>
+    </Requirements>
+    <Capability Name="Recruit Militia" Level="1"/>
+    <Capability Name="Armorer" Level="3"/>
+  </Building>
+
+  <!-- Bowyer String -->
+  <Building ID ="Bowyer" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl1"/>
+    </Model>
+    <Construction Cost="400" MinTurns="2" Upkeep="50" Military ="true" CardIcon="G_BuildingIcon_BowyerLvl1_01" CardMinorIcon="G_Icon12x12_Bowyer_01"/>
+    <Capability Name="Recruit Militia" Level="1"/>
+  </Building>
+  <Building ID ="Crossbow Maker" InSettlement="true" Upgrades="Bowyer">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl2"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" MinTurns="3" Upkeep="65" Military ="true" CardIcon="G_BuildingIcon_BowyerLvl2_01" CardMinorIcon="G_Icon12x12_Bowyer_01"/>
+    <Requirements>
+      <Tech Item="Crossbow"/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false"/>
+    </StaticRequirements>
+    <Capability Name="Recruit Militia" Level="1"/>
+  </Building>
+
+  <!-- Weaponsmith String -->
+  <Building ID ="Weapon Smith" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="250" MinTurns="2" Upkeep="30" Military ="true" CardIcon="G_BuildingIcon_WeaponsmithLvl1_01" CardMinorIcon="G_Icon12x12_Weaponsmith_01"/>
+    <Requirements>
+      <Tech Item="Advanced Bronze Casting"/>
+    </Requirements>
+    <Capability Name="Recruit Militia" Level="1"/>
+  </Building>
+  <Building ID ="Swordsmith" InSettlement="true" Upgrades="Weapon Smith">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl2"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" SackValue="500" MinTurns="4" Upkeep="50" Military ="true" CardIcon="G_BuildingIcon_WeaponsmithLvl2_01" CardMinorIcon="G_Icon12x12_Weaponsmith_01"/>
+    <Requirements>
+      <Building ID="Foundry"/>
+      <Tech Item="Sword Making"/>
+    </Requirements>
+    <Capability Name="Recruit Militia" Level="1"/>
+  </Building>
+
+  <!-- Stables -->
+  <Building ID="Stables" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseStables_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaStables_Lvl1"/>
+    </Model>
+    <Construction Cost="1000" MinTurns="4" Upkeep="100" Military ="true" CardIcon="G_BuildingIcon_StableLvl1_01" CardMinorIcon="G_Icon12x12_Stable_01"/>
+    <Requirements>
+      <Building ID="Palace"/>
+      <Tech Item="Light Chariot"/>
+    </Requirements>
+    <Capability Name="Recruit Army Horsemen" Level="3"/>
+  </Building>
+
+  <!-- Barracks -->
+  <Building ID="Barracks" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1"/>
+    </Model>
+    <Construction Cost="750" MinTurns="2" Upkeep="60" Military ="true" CardIcon="G_BuildingIcon_BarracksLvl1_01" CardMinorIcon="G_Icon12x12_Barracks_01"/>
+    <Requirements>
+      <Tech Item="Signaling"/>
+      <Building ID="Palace"/>
+    </Requirements>
+    <Capability Name="Recruit Regulars" Level="4"/>
+  </Building>
+
+  <!-- Jail -->
+  <Building ID="Jail" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl1"/>
+	   <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl1"/>
+    </Model>
+    <Construction Cost="750" MinTurns="3" Upkeep="30" CardIcon="G_BuildingIcon_PrisonLvl1_01" CardMinorIcon="G_Icon12x12_Prison_01"/>
+    <Requirements>
+      <Tech Item="Five Punishments"/>
+    </Requirements>
+    <Capability Name ="Suppress Peasants" Level="10"/>
+  </Building>
+  <Building ID="Prison" InSettlement="true" Upgrades="Jail">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2"/>
+	   <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" MinTurns="5" Upkeep="100" CardIcon="G_BuildingIcon_PrisonLvl2_01" CardMinorIcon="G_Icon12x12_Prison_01"/>
+    <Requirements>
+      <Building ID="Palace"/>
+    </Requirements>
+    <Capability Name="Recruit Convicts" Level="4"/>
+    <Capability Name ="Suppress Peasants" Level="20"/>
+  </Building>
+
+  <!-- Theater -->
+  <Building ID ="Theater" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTheater_Lvl1"/>
+	   <Prefab  Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CATheater_Lv1"/>
+    </Model>
+    <Construction Cost="1000" SackValue="500" MinTurns="4" Upkeep="100" CardIcon="G_BuildingIcon_TheatreLvl1_01" CardMinorIcon="G_Icon12x12_Theatre_01"/>
+    <Requirements>
+      <Population Num="20"/>
+      <Tech Item="Theatre"/>
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10"/>
+    <Capability Name="Noble Happiness" Level="10"/>
+    <Capability Name="Culture VP" Level="2"/>
+  </Building>
+  
+  <!-- Market string -->
+  <Building ID="Bazaar" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1"/>
+	  
+    </Model>
+    <Construction Cost="500" SackValue="250" MinTurns="2" Upkeep="20" CardIcon="G_BuildingIcon_MarketLvl1_01" CardMinorIcon="G_Icon12x12_Market_01"/>
+    <Capability Name="Trade Distance" Level="12"/>
+    <Capability Name="Trade Level" Level="2"/>
+    <Capability Name="Produce Local Items" Level="1"/>
+    <Capability Name="Increase Internal Trade" Level="50"/>
+  </Building>
+  <Building ID="Market" InSettlement="true" Upgrades="Bazaar">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2"/>
+	   <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" SackValue="500" MinTurns="4" Upkeep="80" CardIcon="G_BuildingIcon_MarketLvl2_01" CardMinorIcon="G_Icon12x12_Market_01"/>
+    <Requirements>
+      <Tech Item="Coinage"/>
+    </Requirements>
+    <Capability Name="Trade Distance" Level="18"/>
+    <Capability Name="Trade Level" Level="3"/>
+    <Capability Name="Produce Local Items" Level="1"/>
+    <Capability Name="Increase Internal Trade" Level="50"/>
+  </Building>
+  <Building ID="Trade Center" InSettlement="true" Upgrades="Market">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3"/>
+	   <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3"/>
+    </Model>
+    <Construction Cost="2000" SackValue="1000" MinTurns="6" Upkeep="200" CardIcon="G_BuildingIcon_MarketLvl3_01" CardMinorIcon="G_Icon12x12_Market_01"/>
+    <Requirements>
+      <Tech Item="Paper Currency"/>
+    </Requirements>
+    <Capability Name="Trade Distance" Level="24"/>
+    <Capability Name="Trade Level" Level="4"/>
+    <Capability Name="Produce Local Items" Level="1"/>
+    <Capability Name="Increase Internal Trade" Level="50"/>
+  </Building>
+  
+  <!-- Artillery string -->
+  <Building ID="Artillery Camp" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArtillery_Lvl1"/>
+    </Model>
+    <Construction Cost="500" MinTurns="2" Upkeep="80" Military ="true" CardIcon="G_BuildingIcon_ArtilleryWorkshopLvl1_01" CardMinorIcon="G_Icon12x12_ArtilleryWorkshop_01"/>
+    <Requirements>
+      <Tech Item="Stone Throwing Engine"/>
+    </Requirements>
+    <Capability Name="Recruit Artillery" Level="2"/>
+  </Building>
+  <Building ID="Artillery Workshop" InSettlement="true" Upgrades="Artillery Camp">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArtillery_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" MinTurns="4" Upkeep="120" Military ="true" CardIcon="G_BuildingIcon_ArtilleryWorkshopLvl2_01" CardMinorIcon="G_Icon12x12_ArtilleryWorkshop_01"/>
+    <Requirements>
+      <RequireEither>
+        <Tech Item="Four Legged Engine"/>
+        <Tech Item="Triple Giant Crossbow"/>
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Recruit Artillery" Level="2"/>
+  </Building>
+  <Building ID="Cannon Maker" InSettlement="true" Upgrades="Artillery Workshop">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArtillery_Lvl3"/>
+    </Model>
+    <Construction Cost="2000" MinTurns="6" Upkeep="200" Military ="true" CardIcon="G_BuildingIcon_ArtilleryWorkshopLvl3_01" CardMinorIcon="G_Icon12x12_ArtilleryWorkshop_01"/>
+    <Requirements>
+      <Tech Item="Cannon Making"/>
+      <Building ID ="Iron Foundry"/>
+    </Requirements>
+    <Capability Name="Recruit Artillery" Level="2"/>
+  </Building>
+  
+  <!-- Ceramics Factory String -->
+  <Building ID ="Pottery Workshop" InSettlement="true"  AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCeramics_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACeramics_Lvl1"/>
+    </Model>
+    <Construction Cost="750" SackValue="750" MinTurns="3" Upkeep="0" CardIcon="G_BuildingIcon_CeramicsLvl1_01" CardMinorIcon="G_Icon12x12_CeramicsFactory_01"/>
+    <Requirements>
+      <Tech Item="Black Ceramics"/>
+    </Requirements>
+    <Capability Name="Produce Ceramics" Level="1"/>
+  </Building>
+  <Building ID ="Ceramics Factory" InSettlement="true" Upgrades="Pottery Workshop">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCeramics_Lvl2"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACeramics_Lvl2"/>
+    </Model>
+    <Construction Cost="1500" SackValue="1500" MinTurns="5" Upkeep="150" CardIcon="G_BuildingIcon_CeramicsLvl2_01" CardMinorIcon="G_Icon12x12_CeramicsFactory_01"/>
+    <Requirements>
+      <Tech Item="Industrial Pottery Production"/>
+      <Building ID="Bazaar"/>
+    </Requirements>
+    <Capability Name="Produce Ceramics" Level="2"/>
+  </Building>
+  
+  <!-- Weaver -->
+  <Building ID ="Weaver" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1"/>
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="200" MinTurns="4" Upkeep="20" CardIcon="G_BuildingIcon_SilkWeaverLvl1_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01"/>
+    <Requirements>
+      <Tech Item="Draw Loom"/>
+    </Requirements>
+    <Capability Name="Produce Textiles" Level="1"/>
+  </Building>
+  <!-- Silk Weaver -->
+  <Building ID ="Silk Weaver" InSettlement="true" Upgrades ="Weaver">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" SackValue="1000" MinTurns="4" Upkeep="80" CardIcon="G_BuildingIcon_SilkWeaverLvl1_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01"/>
+    <Requirements>
+      <Tech Item="Silk"/>
+    </Requirements>
+    <Capability Name="Produce Silk" Level="1"/>
+    <Capability Name="Produce Textiles" Level="1"/>
+  </Building>
+  
+  <!-- Caravansary -->
+  <Building ID ="Caravansary" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCaravansary_Lvl1"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaCaravansary_Lvl1"/>
+    </Model>
+    <Construction Cost="1000" SackValue="500" MinTurns="4" Upkeep="100" CardIcon="G_BuildingIcon_CaravansaryLvl1_01" CardMinorIcon="G_Icon12x12_Caravansary_01"/>
+    <Requirements>
+      <Tech Item="Coinage"/>
+      <Building ID="Bazaar"/>
+      <OnwardTradePossible/>
+    </Requirements>
+    <Capability Name="Onward Trade" Level="1"/>
+  </Building>
+
+  <!-- Granary -->
+  <Building ID ="Granary" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseGranary_Lvl1"/>
+	   <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAGranary_Lvl1"/>
+    </Model>
+    <Construction Cost="500" SackValue="300" MinTurns="3" Upkeep="20" CardIcon="G_BuildingIcon_GranaryLvl1_01" CardMinorIcon="G_Icon12x12_Granary_01"/>
+    <Capability Name="Store Food" Level="2"/>
+  </Building>
+  <Building ID ="Siege Granary" InSettlement="true" Upgrades="Granary">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseGranary_Lvl2"/>
+	  <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAGranary_Lvl2"/>
+    </Model>
+    <Construction Cost="1000" SackValue="600" MinTurns="4" Upkeep="50" CardIcon="G_BuildingIcon_GranaryLvl2_01" CardMinorIcon="G_Icon12x12_Granary_01"/>
+    <Requirements>
+      <Building ID="Palace"/>
+    </Requirements>
+    <Capability Name="Store Food" Level="6"/>
+  </Building>
+
+
+  <!-- Walls -->
+  <Building ID ="Wooden Palisade" InSettlement="true">
+    <VirtualBuilding Type="Wall" Level="0"/>
+    <Construction Cost="750" MinTurns="3" Upkeep="0" CardIcon="G_BuildingIcon_Walls_Lvl1_01" CardMinorIcon="G_Icon12x12_Defences_01"/>
+  </Building>
+  <Building ID ="Rammed Earth Wall" InSettlement="true" Upgrades="Wooden Palisade">
+    <VirtualBuilding Type="Wall" Level="1"/>
+    <Construction Cost="2000" MinTurns="6" Upkeep="0" CardIcon="G_BuildingIcon_Walls_Lvl2_01" CardMinorIcon="G_Icon12x12_Defences_01"/>
+    <Requirements>
+      <Building ID="Palace"/>
+      <Tech Item="Rammed Earth Wall"/>
+    </Requirements>
+  </Building>
+  <Building ID ="High Earth Wall" InSettlement="true" Upgrades="Rammed Earth Wall">
+    <VirtualBuilding Type="Wall" Level="2"/>
+    <Construction Cost="1500" MinTurns="4" Upkeep="0" CardIcon="G_BuildingIcon_Walls_Lvl3_01" CardMinorIcon="G_Icon12x12_Defences_01"/>
+    <Requirements>
+      <Building ID="Palace"/>
+      <Tech Item="High Walls"/>
+    </Requirements>
+  </Building>
+
+  <!-- Wall Upgrades -->
+  <Building ID ="Shooting Galleries" InSettlement="true">
+    <VirtualBuilding Type="Tower" Level="0"/>
+    <Construction Cost="750" MinTurns="2" Upkeep="0" CardIcon="G_BuildingIcon_ShootingGalleries_01" CardMinorIcon="G_Icon12x12_Defences_01"/>
+    <Requirements>
+      <Building ID="Rammed Earth Wall"/>
+      <Tech Item="Military Architecture"/>
+    </Requirements>
+  </Building>
+
+  <!-- Settlements -->
+  <!-- Dummies to represent settlement on building screen -->
+  <Building ID ="Town" InSettlement="true" AllowedForHorde ="true">
+    <VirtualBuilding Type="CityLevel" Level="0"/>
+    <Construction Cost="0" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_Town_01" CardMinorIcon="G_Icon12x12_City_01"/>
+    <StaticRequirements>
+      <Never/>
+    </StaticRequirements>
+    <Capability Name="Recruit Civilians" Level="1"/>
+    <Capability Name="City Min Territory" Level ="3"/>
+    <Capability Name="City Max Improvement Distance" Level ="4"/>
+    <Capability Name="Max Population" Level="80"/>
+  </Building>
+  <Building ID ="City" InSettlement="true" Upgrades="Town">
+    <VirtualBuilding Type="CityLevel" Level="1"/>
+    <Construction Cost="0" MinTurns="1" Upkeep="30" CardIcon="G_BuildingIcon_City_01" CardMinorIcon="G_Icon12x12_City_01"/>
+    <StaticRequirements>
+      <Never/>
+    </StaticRequirements>
+    <Capability Name="Recruit Civilians" Level="1"/>
+    <Capability Name="City Min Territory" Level ="4"/>
+    <Capability Name="City Max Improvement Distance" Level ="5"/>
+    <Capability Name="Max Population" Level="160"/>
+  </Building>
+  <Building ID ="Huge City" InSettlement="true" Upgrades="City">
+    <VirtualBuilding Type="CityLevel" Level="2"/>
+    <Construction Cost="0" MinTurns="1" Upkeep="60" CardIcon="G_BuildingIcon_CityLarge_01" CardMinorIcon="G_Icon12x12_City_01"/>
+    <StaticRequirements>
+      <Never/>
+    </StaticRequirements>
+    <Capability Name="Recruit Civilians" Level="1"/>
+    <Capability Name="City Min Territory" Level ="5"/>
+    <Capability Name="City Max Improvement Distance" Level ="6"/>
+    <Capability Name="Max Population" Level="250"/>
+  </Building>
+
+  <!-- Settlement Upgrades //////////////////////////////////////////////////-->
+
+  <!-- Added for Genghis but must come before other settlement upgrades -->
+  <Building ID ="Town To Horde" InSettlement="true" AllowedForHorde="true">
+    <VirtualBuilding Type="TownToHorde" Level="1"/>
+    <Construction Cost="500" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_Mongol_Icon_ConvertHordeToTown_01" CardMinorIcon="G_Icon12x12_City_01"/>
+    <Requirements>
+      <HordeSettlement Condition="false"/>
+      <Population Num="40" Condition="false"/>
+      <Tech Item="Iron Wheeled Carts"/>
+      <CanConvertToHorde/>
+    </Requirements>
+  </Building>
+
+  <Building ID ="City Upgrade" InSettlement="true">
+    <VirtualBuilding Type="CityUpgrade" Level="1"/>
+    <Construction Cost="2000" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_City_01" CardMinorIcon="G_Icon12x12_City_01"/>
+    <Requirements>
+      <Building ID="Town" Exact="true"/>
+      <HordeSettlement Condition="false"/>
+      <Population Num="40"/>
+    </Requirements>
+  </Building>
+
+  <Building ID ="Huge City Upgrade" InSettlement="true">
+    <VirtualBuilding Type="CityUpgrade" Level="2"/>
+    <Construction Cost="4000" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_CityLarge_01" CardMinorIcon="G_Icon12x12_City_01"/>
+      <Requirements>
+        <Building ID="City" Exact="true"/>
+        <Population Num="100"/>
+      </Requirements>
+  </Building>
+
+  <!-- Deprecated Buildings. Exist only to preserve saved games -->
+  <!-- Chariot Maker -->
+  <Building ID="Chariot Maker" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1"/>
+    </Model>
+    <Construction Cost="1000" MinTurns="4" Upkeep="200" Military ="true" CardIcon="G_BuildingIcon_ChariotMakerLvl1_01" CardMinorIcon="G_Icon12x12_ChariotMaker_01"/>
+    <Requirements>
+      <Never/>
+    </Requirements>
+    <Capability Name="Recruit Army Horsemen" Level="3"/>
+  </Building>
+
+  <!-- New Buildings For Genghis -->
+  <Building ID="Assyrian Church I" InSettlement="true" Tags="Nestorian Christian">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Style ="Nomad" Name="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Christian"/>
+    </Model>
+    <Construction Cost="300" SackValue="300" MinTurns="2" Upkeep="35" CardIcon="G_BuildingIcon_NestorianChurch" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Requirements>
+      <Tech Item="Nestorian Christianity"/>
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10"/>
+    <Capability Name="Disaster Medical Care" Level="25"/>
+  </Building>
+
+  <!-- Silk Weaver -->
+  <Building ID ="Carpet Maker" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1"/>
+      <Prefab Style ="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACarpetMaker_Lvl1"/>
+    </Model>
+    <Construction Cost="600" SackValue="500" MinTurns="4" Upkeep="40" CardIcon="G_BuildingIcon_SilkWeaverLvl1_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01"/>
+    <Requirements>
+      <Tech Item="Carpet Weaving"/>
+    </Requirements>
+    <Capability Name="Produce Carpets" Level="1"/>
+  </Building>
+
+  <!--
+  <Building ID="Ordo Tent" InSettlement="true">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Style ="Nomad" Name="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Ordo"/>
+    </Model>
+    <Construction Cost="500" SackValue="750" MinTurns="2" Upkeep="65" CardIcon="G_BuildingIcon_TempleConfucianLvl1_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01"/>
+    <Requirements>
+      <Never/>
+    </Requirements>
+  </Building>
+-->
+  
+
+</Root>

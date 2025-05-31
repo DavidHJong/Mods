@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation ="OrientalEmpires Edicts.xsd">
+
+  <!-- Agriculture -->
+  <Edict ID="Well Field System" Area="Economy" MayBeCancelled="false">
+    <Requirements>
+      <Tech Item="Flood Control"/>
+      <Edict Item="Equal Field System" Condition="false"/>
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="10"/>
+    <Effect Type ="NobleUnrest" Value="-10"/>
+    <Effect Type="PeasantUnrest" Value="10" Turns="10"/>
+    <Effect Type="CollectAgricultureTax" Value="2"/>
+  </Edict>
+
+  <Edict ID="Private Land" Area="Agriculture">
+    <Requirements>
+      <Edict Item="Central Bureaucracy"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false"/>
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="FoodProduction" Value="1.2"/>
+    <Effect Type="Cost" Value="300" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="10" Turns="10"/>
+<!--    <Effect Type="PeasantUnrest" Value="0.3" PerTurn="true"/> -->
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="20"/>
+    <CancelEffect Type="PeasantUnrest" Value="10" Turns="10"/>
+  </Edict>
+
+  <Edict ID="Land Redistribution" Area="Misc" NumTurns="80">
+    <Requirements>
+      <Edict Item="Central Bureaucracy"/>
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-10" Turns="80"/>
+    <Effect Type="NobleUnrest" Value="20" Turns="20"/>
+    <Effect Type="Cost" Value="3000"/>
+  </Edict>
+
+  <!-- Econony -->
+  <Edict ID ="Standardization" Area="Economy">
+    <Requirements>
+      <Tech Item="Legalism"/>
+    </Requirements>
+    <Effect Type="Trade" Value="1.2"/>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type="NobleUnrest" Value="20" Turns="10"/>
+    <Effect Type="PeasantUnrest" Value="20" Turns="10"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+  
+  <!-- Social -->
+  <Edict ID="Relocation of Nobles" Area="Authority">
+    <Requirements>
+      <Tech Item="Priest King"/>
+    </Requirements>
+    <Effect Type="Authority" Value="2"/>
+    <Effect Type="NobleUnrest" Value="20" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <!-- Military -->
+  <Edict ID="Promotion in Battle" Area="Military">
+    <Requirements>
+      <Tech Item="Legalism"/>
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="NobleUnrest" Value="10" Turns="20"/>
+    <Effect Type="FoodProduction" Value="0.9"/>
+    <Effect Type="BattleMorale" Value="1"/>
+    <CancelEffect Type="PeasantUnrest" Value="20" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Private Arms Ban" Area="Misc">
+    <Requirements>
+      <Tech Item="Legalism"/>
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-20"/>
+    <Effect Type="NobleUnrest" Value="-10"/>
+    <Effect Type="MilitiaAvailability" Value="0.5"/>
+    <Effect Type="PeasantUnrest" Value="30" Turns="20"/>
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="10"/>
+  </Edict>
+
+  <Edict ID="Gentlemen Ride Chariots" Area="Military" MayBeCancelled="false" IssuedInStartingEra="1">
+    <Requirements>
+      <Tech Item="Light Chariot"/>
+      <Era Value="2" Condition="false"/>
+      <Edict Item="Gentlemen Ride Horses" Condition="false"/>
+    </Requirements>
+    <Effect Type="Recruitment" Value="0"/>
+    <Effect Type="NobleUnrest" Value="10" Turns="15"/>
+  </Edict>
+
+  <Edict ID="Gentlemen Ride Horses" Area="Military" MayBeCancelled="false" IssuedInStartingEra="2">
+    <Requirements>
+      <Tech Item="Horse Archery"/>
+      <Era Value="0" Exact="true" Condition="false"/>
+    </Requirements>
+    <Effect Type="Recruitment" Value="0"/>
+    <CancelsEdict Name="Gentlemen Ride Chariots"/>
+  </Edict>
+
+  <Edict ID="Fubing Militia" Area="Military">
+    <Requirements>
+      <Era Value="2"/>
+    </Requirements>
+    <Effect Type="Cost" Value="500" PerTurn="true"/>
+    <Effect Type="MilitiaAvailability" Value="1.5"/>
+    <Effect Type="MilitiaSkill" Value="0.2"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+  
+  <!-- Era Progression -->
+  <Edict ID="Warring States" Area="Misc" MayBeCancelled ="false" IssuedInStartingEra="1">
+    <Requirements>
+      <NumTechs Num="28" Era ="0"/>
+    </Requirements> 
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="10"/>
+    <Effect Type ="AdvanceEra" Value="1"/>
+  </Edict>
+
+  <Edict ID="Imperial Era" Area="Misc" MayBeCancelled ="false" IssuedInStartingEra="2">
+    <Requirements>
+      <Era Value="1"/>
+      <NumTechs Num="24" Era ="1"/>
+    </Requirements>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="10"/>
+    <Effect Type ="AdvanceEra" Value="2"/>
+  </Edict>
+
+  <!--Culture -->
+  <Edict ID="Patronize The Arts" Area="Culture">
+    <Requirements>
+      <Tech Item="Poetry"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="Cost" Value="200" PerTurn="true"/>
+    <CancelEffect Type="NobleUnrest" Value="5" Turns="10"/>
+  </Edict>
+
+  <!-- Version with Three Kingdoms Tech -->
+  <Edict ID="Patronize The Arts New" Area="Culture" TranslationTag="Patronize The Arts">
+    <Requirements>
+      <Tech Item="Poetry2"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="true"/>
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="Cost" Value="200" PerTurn="true"/>
+    <CancelEffect Type="NobleUnrest" Value="5" Turns="10"/>
+  </Edict>
+
+  <Edict ID="Official Historian" Area="Culture">
+    <Requirements>
+      <Tech Item="History"/>
+    </Requirements>
+    <Effect Type="Authority" Value="1"/>
+    <Effect Type="Culture" Value="1"/>
+    <Effect Type="Cost" Value="100" PerTurn="true"/>
+    <CancelEffect Type="NobleUnrest" Value="5" Turns="10"/>
+  </Edict>
+
+  <Edict ID="Minor Loan" Area ="Economy" MayBeCancelled ="false" NumTurns="5">
+    <Requirements>
+      <Tech Item ="Banking"/>
+    </Requirements>
+    <Effect Type="Cost" Value="250" PerTurn="true"/>
+    <Effect Type="ImmediateIncome" Value="1000"/>
+  </Edict>
+  
+  <Edict ID="Major Loan" Area ="Economy" MayBeCancelled ="false" NumTurns="20">
+    <Requirements>
+      <Tech Item ="Banking"/>
+    </Requirements>
+    <Effect Type="Cost" Value="200" PerTurn="true"/>
+    <Effect Type="ImmediateIncome" Value="2500"/>
+  </Edict>
+
+  <Edict ID="Trade Venture" Area ="Economy" MayBeCancelled ="false" NumTurns="25">
+    <Requirements>
+      <Tech Item ="Joint Stock Company"/>
+    </Requirements>
+    <Effect Type="Cost" Value="3000"/>
+    <Effect Type="Income" Value="250"/>
+  </Edict>
+
+  <Edict ID="Equal Field System" Area="Economy" MayBeCancelled="false">
+    <Requirements>
+      <Era Value="2"/>
+    </Requirements>
+    <Effect Type="Cost" Value="2000"/>
+    <Effect Type="PeasantUnrest" Value="10" Turns="10"/>
+    <Effect Type="NobleUnrest" Value="10" Turns="20"/>
+    <Effect Type="CollectAgricultureTax" Value="3"/>
+    <CancelsEdict Name="Well Field System"/>
+  </Edict>
+
+  <Edict ID ="Ban Dangerous Books" Area="Authority">
+    <Requirements>
+      <Tech Item="Legalism"/>
+    </Requirements>
+    <Effect Type="Cost" Value="500"/>
+    <Effect Type="NobleUnrest" Value="10"/>
+    <Effect Type="Authority" Value="3"/>
+    <Effect Type="Culture" Value="-5"/>
+    <CancelEffect Type="Culture" Value="-3" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Self Criticism" Area="Misc" NumTurns="20" MayBeCancelled="false">
+    <Requirements>
+      <Tech Item="Mandate of Heaven"/>
+      <SettlementWithDisasterUnrest/>
+    </Requirements>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type ="PersonalAuthority" Value="-2"/>
+    <Effect Type="DisasterUnrest" Value="0"/>
+  </Edict>
+
+  <Edict ID="Move Capital" Area="Misc" NumTurns="10" ExpireSilently="true" MayBeCancelled="false">
+    <Requirements>
+      <Tech Item="Priest King"/>
+      <CanRelocateCapital/>
+    </Requirements>
+    <Effect Type="Cost" Value="500"/>
+    <Effect Type="MoveCapital" Value="0"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="10"/>
+  </Edict>
+
+  <!-- Faction Specific -->
+  <Edict ID="Ride Like a Barbarian" Area="Military">
+    <Requirements>
+      <Tech Item="Horse Archery"/>
+      <Edict Item="Gentlemen Ride Horses"/>
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Zhao"/>
+    </StaticRequirements>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type ="RecruitSpecialUnits" Value="0"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-3" Turns="20"/>
+  </Edict>
+  
+  <!-- New For Genghis ////////////////////////////////////////////////////////////////////////-->
+  <Edict ID="Kurultai" Area="Authority" NumTurns="2" ExpireSilently="true" MayBeCancelled="false">
+    <Requirements>
+      <Tech Item="Kurultai"/>
+      <SuccessionCrisis/>
+      <FactionLeaderInCapital/>
+    </Requirements>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type="CancelSuccessionPenalty" Value="10"/>
+    <Effect Type ="PersonalAuthority" Value="1"/>
+  </Edict>
+
+  <Edict ID="Great Kurultai" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <ScriptEventTriggered Event="Genghis Khan"/>
+      <FactionLeaderInCapital/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Genghis"/>
+    </StaticRequirements>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type ="PersonalAuthority" Value="8"/>
+  </Edict>
+
+  <Edict ID="Yam Messenger System" Area="Authority">
+    <Requirements>
+      <Tech Item="Khanate Administration"/>
+    </Requirements>
+    <Effect Type="Cost" Value="800" PerTurn="true"/>
+    <Effect Type="CancelDistancePenalty" Value="1"/>
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Forbid Looting" Area="Military">
+    <Requirements>
+      <Tech Item ="Military Theory"/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders"/>
+    </StaticRequirements>
+    <Effect Type="IncreaseBooty" Value="2"/>
+    <Effect Type="Cost" Value="300"/>
+  </Edict>
+
+  <Edict  ID="Establish Keshik" Area="Military" MayBeCancelled="false">
+    <Requirements>
+      <Edict Item="Great Kurultai"/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Genhis"/>
+    </StaticRequirements>
+    <Effect Type ="RecruitSpecialUnits" Value="0"/>
+    <Effect Type="Cost" Value="1000"/>
+  </Edict>
+
+  <Edict ID="Yassa Law" Area="Authority">
+    <Requirements>
+      <Tech Item="Khanate Administration"/>
+    </Requirements>
+    <Effect Type="Cost" Value="200" PerTurn="true"/>
+    <Effect Type="Authority" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <CancelEffect Type ="PeasantUnrest" Value="20" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Freedom of Worship" Area="Culture">
+    <Requirements>
+      <Tech Item="Khanate Administration"/>
+    </Requirements>
+    <Effect Type="Cost" Value="200"/>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <CancelEffect Type ="PeasantUnrest" Value="20" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Tax Exemption" Area="Culture">
+    <Requirements>
+      <Tech Item="Khanate Administration"/>
+    </Requirements>
+    <Effect Type="Cost" Value="300" PerTurn="true"/>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-5"/>
+  </Edict>
+
+  <!-- Edicts for Offices and Royal Court -->
+  <Edict ID="Grand Commandant New" Area="Military" TranslationTag="Grand Commandant">
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <!-- Value 1 = general-->
+    <Effect Type="AddLeader" Value="1"/>
+    <Effect Type="Authority" Value="-1"/>
+    <Effect Type="Cost" Value="80" PerTurn="true"/>
+    <Effect Type="CreateOffice" Name="Grand Commandant" Value ="0"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Central Bureaucracy New" Area="Authority" LeaderTitle="ELDR Chancellor" TranslationTag ="Central Bureaucracy">
+    <Requirements>
+      <Tech Item="Bamboo Strips"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Grand Chancellor" Value ="0"/>
+    <!-- Value 2 = admin-->
+    <Effect Type="AddLeader" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="Authority" Value="2"/>
+    <Effect Type="Cost" Value="400" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="25" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="The Three Excellencies" Area="Authority">
+    <Requirements>
+      <Edict Item="Central Bureaucracy New"/>
+      <Edict Item="Grand Commandant New"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Imperial Counsellor" Value ="0"/>
+    <Effect Type="Authority" Value="1"/>
+    <Effect Type="Cost" Value="100" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="10" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+ 
+  <Edict ID="Minister Coachman" Area="Authority">
+    <Requirements>
+      <Tech Item="Light Chariot"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister Coachman" Value ="0"/>
+    <Effect Type="Authority" Value="1"/>
+    <Effect Type="Cost" Value="60" PerTurn="true"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Centralized Justice" Area="Authority">
+    <Requirements>
+      <Tech Item="Five Punishments"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister of Justice" Value ="0"/>
+    <Effect Type="Authority" Value="1"/>
+    <Effect Type="Cost" Value="100" PerTurn="true"/>
+    <CancelEffect Type="PeasantUnrest" Value="15" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Centralized Rites" Area="Culture">
+    <Requirements>
+      <Tech Item="Imperial Rites"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister of Rites" Value ="0"/>
+    <Effect Type="Culture" Value="1"/>
+    <Effect Type="Cost" Value="80" PerTurn="true"/>
+    <CancelEffect Type="Authority" Value="-2" Turns="10"/>
+  </Edict>
+
+  <!--
+  <Edict ID="The Six Ministries" Area="Authority">
+    <Requirements>
+      <Tech Item="Paper"/>
+      <Edict Item="The Three Excellencies"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister oF War" Value ="0"/>
+    <Effect Type="CreateOffice" Name="Minister oF Finance" Value ="0"/>
+    <Effect Type="CreateOffice" Name="Minister of Works" Value ="0"/>
+    <Effect Type="CreateOffice" Name="Minister of Rites" Value ="0"/>
+    <Effect Type="CreateOffice" Name="Minister of Justice" Value ="0"/>
+    <Effect Type="CreateOffice" Name="Minister of Personnel" Value ="0"/>
+    <Effect Type="Authority" Value="8"/>
+    <Effect Type="Cost" Value="500" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-4" Turns="20"/>
+    <CancelsEdict Name="Grand Commandant New"/>
+    <CancelsEdict Name="Central Bureaucracy New"/>
+    <CancelsEdict Name="The Three Excellencies"/>
+    <CancelsEdict Name="Minister Coachman"/>
+  </Edict>
+-->
+  
+  <Edict ID="Appoint a Shi New" Area="Military" TranslationTag="Appoint a Shi">
+    <Requirements>
+      <Tech Item="I Ching"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="true"/>
+    </StaticRequirements>
+    <!-- Value 2 = admin-->
+    <Effect Type="CreateOffice" Value ="0" Name="Advisor 1"/>
+    <Effect Type="NobleUnrest" Value="5"/>
+    <Effect Type="Cost" Value="30" PerTurn="true"/>
+    <Effect Type="Cost" Value="0"/>
+  </Edict>
+
+  <Edict ID="Appoint a Strategist New" Area="Military" TranslationTag="Appoint a Strategist">
+    <Requirements>
+      <Tech Item="Military Theory"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="true"/>
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Value ="0" Name="Advisor 2"/>
+    <Effect Type="NobleUnrest" Value="5"/>
+    <Effect Type="Cost" Value="100" PerTurn="true"/>
+  </Edict>
+
+  <Edict ID="Salt Tax New" Area="Economy" TranslationTag="Salt Tax">
+    <Requirements>
+      <Edict Item="Central Bureaucracy New"/>
+      <Tech  Item="Coinage"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="true"/>
+    </StaticRequirements>
+    <Effect Type="NobleUnrest" Value="10"/>
+    <Effect Type="PeasantUnrest" Value ="20"/>
+    <Effect Type="SpecialPopulationTax" Value="1"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Private Land New" Area="Agriculture" TranslationTag="Private Land">
+    <Requirements>
+      <Edict Item="Central Bureaucracy New"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true"/>
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="FoodProduction" Value="1.2"/>
+    <Effect Type="Cost" Value="300" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="10" Turns="10"/>
+    <!--    <Effect Type="PeasantUnrest" Value="0.3" PerTurn="true"/> -->
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="20"/>
+    <CancelEffect Type="PeasantUnrest" Value="10" Turns="10"/>
+  </Edict>
+
+  <Edict ID="Imperial University New" Area="Culture" TranslationTag="Imperial University">
+    <Requirements>
+      <Edict Item="Central Bureaucracy New"/>
+      <Tech Item="Canon of Wisdom"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <Effect Type="Cost" Value="300" PerTurn="true"/>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="TaxCollection" Value="1.1"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Civil Service Examinations New" Area="Culture" TranslationTag="Civil Service Examinations">
+    <Requirements>
+      <Tech Item="Confucianism"/>
+      <Edict Item="Central Bureaucracy New"/>
+      <Era Value="2"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="true"/>
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="Cost" Value="100" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="10"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <!-- Legacy Edicts for games not using royal court /////////////////////////////////////////////////////////-->
+  <!-- Civil Service -->
+  <Edict ID="Central Bureaucracy" Area="Authority" LeaderTitle="ELDR Chancellor">
+    <Requirements>
+      <Tech Item="Bamboo Strips"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <!-- Value 2 = admin-->
+    <Effect Type="AddLeader" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="Authority" Value="2"/>
+    <Effect Type="Cost" Value="500" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="25" Turns="20"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Salt Tax" Area="Economy">
+    <Requirements>
+      <Edict Item="Central Bureaucracy"/>
+      <Tech  Item="Coinage"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <Effect Type="NobleUnrest" Value="10"/>
+    <Effect Type="PeasantUnrest" Value ="20"/>
+    <Effect Type="SpecialPopulationTax" Value="1"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Imperial University" Area="Culture">
+    <Requirements>
+      <Edict Item="Central Bureaucracy"/>
+      <Tech Item="Canon of Wisdom"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <Effect Type="Cost" Value="300" PerTurn="true"/>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="PeasantUnrest" Value="-10"/>
+    <Effect Type="TaxCollection" Value="1.1"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Civil Service Examinations" Area="Culture">
+    <Requirements>
+      <Tech Item="Confucianism"/>
+      <Edict Item="Central Bureaucracy"/>
+      <Era Value="2"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2"/>
+    <Effect Type="Cost" Value="100" PerTurn="true"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="10"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Imperial Secretary" Area="Economy">
+    <Requirements>
+      <Era Value="2"/>
+      <Edict Item="Central Bureaucracy"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <Effect Type="NobleUnrest" Value="-15"/>
+    <Effect Type="TaxCollection" Value="1.1"/>
+    <Effect Type ="Cost" Value="200" PerTurn="true"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Grand Commandant" Area="Military" LeaderTitle="ELDR Grand Commandent">
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <!-- Value 1 = general-->
+    <Effect Type="AddLeader" Value="1"/>
+    <Effect Type="Authority" Value="-1"/>
+    <Effect Type="Cost" Value="80" PerTurn="true"/>
+    <CancelEffect Type="Authority" Value="-1" Turns="20"/>
+  </Edict>
+
+  <!-- State -->
+  <Edict ID="Appoint a Shi" Area="Military" LeaderTitle="ELDR Hired Shi">
+    <Requirements>
+      <Tech Item="Logographic Script"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <!-- Value 2 = admin-->
+    <Effect Type="AddLeader" Value="2"/>
+    <Effect Type="NobleUnrest" Value="5"/>
+    <Effect Type="Cost" Value="120" PerTurn="true"/>
+    <Effect Type="Cost" Value="0"/>
+  </Edict>
+
+  <Edict ID="Appoint a Strategist" Area="Military" LeaderTitle="ELDR Military Specialist">
+    <Requirements>
+      <Tech Item="Military Theory"/>
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition ="false"/>
+    </StaticRequirements>
+    <!-- Value 1 = General -->
+    <Effect Type="AddLeader" Value="1"/>
+    <Effect Type="NobleUnrest" Value="5"/>
+    <Effect Type="Cost" Value="150" PerTurn="true"/>
+  </Edict>
+
+  <!-- Edicts for 3K Scenario -->
+  <Edict ID="Abandon Luoyang" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlSettlementAt X="71" Y="73"/>
+      <ControlSettlementAt X="53" Y="70"/>
+      <PlayerCapability Name="Puppet Emperor" Level="1"/>
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Dong Zhuo"/>
+      <FactionTag Tag="Three Kingdoms Edicts"/>
+    </StaticRequirements>
+    <Effect Type="ImmediateIncome" Value="5000" PerTurn="false"/>
+    <Effect Type="Culture" Value="-4"/>
+    <Effect Type="DestroySettlement" Value="71" Name="73"/>
+    <Effect Type="MoveCapitalTo" Value="53" Name="70"/>
+    <Effect Type="NobleUnrest" Value="20" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Force Abdication" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <PlayerCapability Name="Puppet Emperor" Level="1"/>
+      <ControlNumSettlements Num="10" Exact="false"/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Three Kingdoms Edicts"/>
+    </StaticRequirements>
+    <Effect Type="Authority" Value="12"/>
+    <Effect Type="KillPuppetEmperor" Value="0"/>
+    <Effect Type="Cost" Value="2000"/>
+    <CancelsEdict Name="Proclaim King"/>
+    <CancelsEdict Name="Proclaim Emperor"/>
+  </Edict>
+
+  <Edict ID="Proclaim King" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <Edict Item="Force Abdication" Condition="false"/>
+      <Edict Item="Proclaim Emperor" Condition="false"/>
+      <ControlNumSettlements Num="8" Exact="false"/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Three Kingdoms Edicts"/>
+    </StaticRequirements>
+    <Effect Type="Authority" Value="4"/>
+    <Effect Type="Cost" Value="1000"/>
+    <Effect Type="NobleUnrest" Value="15" Turns="20"/>
+  </Edict>
+
+  <Edict ID="Proclaim Emperor" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <PlayerCapability Name="Puppet Emperor" Level="1" Condition="false"/>
+      <Edict Item="Force Abdication" Condition="false"/>
+      <Edict Item="Proclaim King"/>
+      <ControlNumSettlements Num="10" Exact="false"/>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Three Kingdoms Edicts"/>
+    </StaticRequirements>
+    <Effect Type="Authority" Value="12"/>
+    <Effect Type="Cost" Value="2000"/>
+    <Effect Type="NobleUnrest" Value="20" Turns="20"/>
+    <CancelsEdict Name="Proclaim King"/>
+  </Edict>
+  
+  <!-- Possible left to do -->
+  <!-- Abolition of Slavery
+Dissolution of Monasteries
+Crime Reporting System
+Direct Taxation
+Elimination of Aristocracy
+Change Official Religion
+Change Capital
+Government Trade Monopolies
+Land Holding Tax
+Export Ban
+Trade Tax
+Craft Tax
+Imperial labor service
+Rotation of officials
+Purge of Intelligensia
+Civilian Control of Army
+Peasant Loans
+Postal Relay
+Government Schools
+Tax Farming
+Voyage of Exploration
+Eunuch Civil Service
+Purge Palace Eunuchs
+Hereditary Artisans
+Distinctive hair style
+Abolition of foot binding
+Harsh Law Enforcement
+Suppresion of Buddhism
+Adopt religion
+Bury The Scholars
+3 Departments and six ministries system
+
+
+-->
+</Root>
