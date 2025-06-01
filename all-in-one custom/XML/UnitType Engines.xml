@@ -4,15 +4,16 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation ="OrientalEmpires UnitType.xsd">
 
   <!-- All cost and upkeep values after this will be modified by these percentages -->
-  <CostModifiers Recruitment="140" Upkeep="140"/>
+  <CostModifiers Recruitment="140" Upkeep="1400"/>
 
   <!-- Artillery ///////////////////////////////////////////// -->
   <!-- WS Small Trebuchet -->
   <Unit ID ="WS Small Trebuchet" NameTag="Small Trebuchet" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeTrebSmall_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="500" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="5000" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Camp"/>
       <Tech Item="Stone Throwing Engine"/>
     </Requirements>
@@ -60,8 +61,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Medium Trebuchet" NameTag="Medium Trebuchet" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeTrebMed_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="750" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="7500" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Camp"/>
       <Tech Item="Crouching Tiger"/>
     </Requirements>
@@ -121,8 +123,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Large Trebuchet" NameTag="Large Trebuchet" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeTrebLarge_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="1000" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="10000" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Workshop"/>
       <Tech Item="Four Legged Engine"/>
     </Requirements>
@@ -188,8 +191,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IM LCW Trebuchet" NameTag="Counterweight Trebuchet" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeTrebCW_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="500" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="5000" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Workshop"/>
       <Tech Item="Counterweight Trebuchet"/>
     </Requirements>
@@ -238,8 +242,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS L Crossbow Ballista" NameTag="Large Crossbow Ballista" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeBallistaLarge_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="500" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="5000" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Workshop"/>
       <Tech Item="Triple Giant Crossbow"/>
     </Requirements>
@@ -288,8 +293,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS S Crossbow Ballista" NameTag="Small Crossbow Ballista" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeBallistaSmall_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="400" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="4000" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Camp"/>
       <Tech Item="Giant Crossbow"/>
     </Requirements>
@@ -326,8 +332,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IC Small Cannon" NameTag="Small Cannon" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_SiegeCannon_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="600" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="6000" Population="4" Upkeep="150"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Cannon Maker"/>
     </Requirements>
     <MultiBlockFormation PaddingRear="2">
@@ -369,8 +376,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IC Hundred Tigers Launcher" NameTag="Hundred Tigers Launcher" Category="Artillery">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_Siege100Tigers_01" Class="Regular"/>
-    <Recruitment Pool="Artillery" Cost="600" Upkeep ="15"/>
+    <Recruitment Pool="Artillery" Cost="6000" Population="4" Upkeep="250"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Artillery Workshop"/>
       <Tech Item="Hundred Tigers Launcher"/>
     </Requirements>
@@ -414,7 +422,7 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Packed Artillery" NameTag="Packed Artillery" Category="Artillery" NonCombat="true">
     <Banners Main="OE_Banner_Missile" Mini=""/>
     <Card CardName="G_Stack_Type_Settler_01" Class="Levy"/>
-    <Recruitment Pool="Artillery" Cost="1" Upkeep ="0"/>
+    <Recruitment Pool="Artillery" Cost="10" Upkeep="00"/>
     <StaticRequirements>
       <Never/>
     </StaticRequirements>

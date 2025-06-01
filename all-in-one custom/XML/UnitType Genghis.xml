@@ -4,7 +4,7 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation ="OrientalEmpires UnitType.xsd">
 
   <!-- All cost and upkeep values after this will be modified by these percentages -->
-  <CostModifiers Recruitment="140" Upkeep="140"/>
+  <CostModifiers Recruitment="140" Upkeep="1400"/>
 
   <!--/////////////////////////////////////////////////////////-->
   <!-- Mongols ////////////////////////////////////////////////-->
@@ -308,8 +308,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Mongol Tumen Horse Archers L1" NameTag="Tumen Horse Archers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_TumenArchers_01" Class="Tribal" Armor="0"/>
-    <Recruitment Pool="Tribesmen" Cost="0" Upkeep ="20" FirstEra="2" LastEra="2" UnitSet="Mongol"/>
+    <Recruitment Pool="Tribesmen" Cost="00" population="4" Upkeep="200" FirstEra="2" LastEra="2" UnitSet="Mongol"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
       <Building ID="Armorer" Condition="false"/>
@@ -350,8 +351,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Mongol Tumen Lancer L1" NameTag="Tumen Lancers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_TumenLancers_01" Class="Tribal" Armor="0"/>
-    <Recruitment Pool="Tribesmen" Cost="0" Upkeep ="20" FirstEra="2" LastEra="2" UnitSet="Mongol"/>
+    <Recruitment Pool="Tribesmen" Cost="00" population="4" Upkeep="200" FirstEra="2" LastEra="2" UnitSet="Mongol"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Armorer" UpgradeLevel ="0" Exact="true"/>
       <Building ID="Weapon Smith"/>
       <Tech Item="Decimal Army Organization"/>
@@ -383,8 +385,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Mongol Tumen Heavy Cavalry L1" NameTag="Tumen Heavy Cavalry" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_TumenHeavyCavalry_01" Class="Noble" Armor="0"/>
-    <Recruitment Pool="Nobles" Cost="100" Upkeep ="30" Era="2" UnitSet="Mongol"/>
+    <Recruitment Pool="Nobles" Cost="1000" population="4" Upkeep="300" Era="2" UnitSet="Mongol"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
       <Building ID="Armorer" Condition ="false"/>
@@ -422,8 +425,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Mongol Keshik" NameTag="Keshik" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Guard" Armor="0"/>
-    <Recruitment Pool="Palace Troops" Cost="300" Upkeep ="45" Era="2" UnitSet="Mongol"/>
+    <Recruitment Pool="Palace Troops" Cost="3000" population="4" Upkeep="450" Era="2" UnitSet="Mongol"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Armor"/>
       <Tech Item ="Stirrup" Condition="true"/>
       <Building ID="Weapon Smith"/>
@@ -445,8 +449,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Mongol Algincin Scoutss L1" NameTag="Algincin Scouts" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArchers_01" Class="Special" Armor="0"/>
-    <Recruitment Pool="Army Horsemen" Cost="200" Upkeep ="35" FirstEra="2" LastEra="2" UnitSet="Mongol"/>
+    <Recruitment Pool="Army Horsemen" Cost="2000" population="4" Upkeep="350" FirstEra="2" LastEra="2" UnitSet="Mongol"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Tech Item ="Reconnaissance"/>
       <Building ID="Bowyer"/>
@@ -467,9 +472,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Temuchins Family" NameTag="Temuchins Family" Category="Settler" NonCombat="true">
     <Banners Main="OE_Banner_Infantry" Mini=""/>
     <Card CardName="G_Stack_Type_TravellingParty_01" Class="Special"/>
-    <Recruitment Pool="Civilians" Cost="0"  Population="0" Upkeep ="0"/>
+    <Recruitment Pool="Civilians" Cost="00"  Population="1" Upkeep="00"/>
     <Requirements>
-      <Never/>
+      <Population Num ="10"/>
     </Requirements>
     <BlockFormation Depth="4" SpacingX="2" SpacingY="2" Forming="Mob"/>
     <Combat Morale="Civilian"/>
@@ -676,8 +681,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="IT Militia Swordsmen L1" NameTag="IT Militia Swordsmen" Category="Infantry" >
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MeleeSword2H_01" Class="Levy"/>
-    <Recruitment Pool="Militia" Cost="0" Upkeep ="10" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Militia" Cost="00" population="4" Upkeep="100" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Weapon Smith"/>
       <Building ID="Armorer" UpgradeLevel="1" Condition="false"/>
     </Requirements>
@@ -706,8 +712,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="IT Army Swordsmen L1" NameTag="IT Army Swordsmen" Category="Infantry" >
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MeleeSword2H_01" Class="Regular"/>
-    <Recruitment Pool="Regulars" Cost="70" Upkeep ="20" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Regulars" Cost="700" population="4" Upkeep="200" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID ="Barracks"/>
       <Building ID="Weapon Smith"/>
       <Building ID="Armorer" Condition="false"/>
@@ -743,8 +750,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="IT Militia Supported Spearmen L1" NameTag="IT Militia Spear Archers" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MixedBow&amp;Spear_01" Class="Levy"/>
-    <Recruitment Pool="Militia" Cost="0" Upkeep ="25" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Militia" Cost="00" population="4" Upkeep="250" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Barracks"/>
       <Building ID="Bowyer"/>
       <Building ID="Armorer" UpgradeLevel="0" Condition="false"/>
@@ -781,8 +789,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="IT Army Supported Spearmen L1" NameTag="IT Army Spear Archers" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MixedBow&amp;Spear_01" Class="Regular"/>
-    <Recruitment Pool="Regulars" Cost="90" Upkeep ="25" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Regulars" Cost="900" population="4" Upkeep="250" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Barracks"/>
       <Building ID="Bowyer"/>
       <Building ID="Armorer" Condition="false"/>
@@ -826,8 +835,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IT Palace Ghulams L1" NameTag="Palace Ghulams" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Guard" Armor="0"/>
-    <Recruitment Pool="Palace Troops" Cost="350" Upkeep ="45" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Palace Troops" Cost="3500" population="4" Upkeep="450" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Armor"/>
       <Tech Item ="Stirrup" Condition="true"/>
       <Building ID="Weapon Smith"/>
@@ -849,8 +859,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IT Ghulam Archers L1" NameTag="Ghulams Archers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArcherHeavy_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Army Horsemen" Cost="200" Upkeep ="30" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Army Horsemen" Cost="2000" population="4" Upkeep="300" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
       <Building ID="Stables"/>
@@ -879,8 +890,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IT Heavy Ghulam Archers L1" NameTag="Ghulams Heavy Archers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Army Horsemen" Cost="250" Upkeep ="35" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Army Horsemen" Cost="2500" population="4" Upkeep="350" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Tech Item="Stirrup"/>
       <Building ID="Bowyer"/>
@@ -909,8 +921,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IT Turkoman Mercenaries" NameTag="Turkoman Mercenaries" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArchers_01" Class="Mercenary" Armor="0"/>
-    <Recruitment Pool="Army Horsemen" Cost="150" Upkeep ="20" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Army Horsemen" Cost="1500" population="4" Upkeep="200" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
       <Building ID="Stables"/>
@@ -930,8 +943,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="IT Dailami Guard L1" NameTag="Dailami Guard" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MeleeSwordShort_01" Class="Guard"/>
-    <Recruitment Pool="Palace Troops" Cost="150" Upkeep ="30" Era="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Palace Troops" Cost="1500" population="4" Upkeep="300" Era="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Armorer"/>
       <Building ID="Swordsmith"/>
     </Requirements>
@@ -964,8 +978,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="IT Atabeg Horse Archers L1" NameTag="Atabeg Archers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArcherHeavy_01" Class="Noble" Armor="0"/>
-    <Recruitment Pool="Nobles" Cost="0" Upkeep ="18" FirstEra="2" LastEra="2" UnitSet="Islamic Turk"/>
+    <Recruitment Pool="Nobles" Cost="00" population="4" Upkeep="180" FirstEra="2" LastEra="2" UnitSet="Islamic Turk"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
       <Building ID="Armorer" Condition="false"/>
@@ -1069,6 +1084,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
     <ImportUnit ID="Mongol Tribal Spearmen L2"/>
     <ImportUnit ID="Mongol Tribal Spearmen L3"/>
 
+    <ImportUnit ID="Mongol Noble Horse Archers L1"/>
+    <ImportUnit ID="Mongol Noble Horse Archers L2"/>
+
     <ImportUnit ID="Mongol Tribal Horse Archers L1"/>
     <ImportUnit ID="Mongol Tribal Horse Archers L2"/>
     <ImportUnit ID="Mongol Tribal Horse Archers L3"/>
@@ -1077,7 +1095,7 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="JJ Dismounted Meng'an L1" NameTag="Meng'an Cavalry" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MixedBow&amp;Spear_01" Class="Noble"/>
-    <Recruitment Pool="Nobles" Cost="0" Upkeep ="25" Era="2" UnitSet="Jurchen Jin"/>
+    <Recruitment Pool="Nobles" Cost="00" Upkeep="250" Era="2" UnitSet="Jurchen Jin"/>
     <Requirements>
       <Never/>
     </Requirements>
@@ -1106,8 +1124,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="JJ Meng'an Cavalry L1" NameTag="Meng'an Cavalry" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Noble" Armor="0"/>
-    <Recruitment Pool="Nobles" Cost="0" Upkeep ="40" Era="2" UnitSet="Jurchen Jin"/>
+    <Recruitment Pool="Nobles" Cost="00" population="4" Upkeep="400" Era="2" UnitSet="Jurchen Jin"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Armorer" Condition="false"/>
     </Requirements>
@@ -1155,8 +1174,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="JJ Iron Pagoda Cavalry L1" NameTag="Iron Pagodas" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_IronPagodas_01" Class="Guard" Armor="0"/>
-    <Recruitment Pool="Palace Troops" Cost="450" Upkeep ="50" Era="2" UnitSet="Jurchen Jin"/>
+    <Recruitment Pool="Palace Troops" Cost="4500" population="4" Upkeep="500" Era="2" UnitSet="Jurchen Jin"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Armor"/>
       <Building ID="Stables"/>
       <Building ID="Armorer" UpgradeLevel="1"/>
@@ -1251,6 +1271,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
     <ImportUnit ID="Mongol Tribal Horse Archers L2"/>
     <ImportUnit ID="Mongol Tribal Horse Archers L3"/>
 
+    <ImportUnit ID="Mongol Noble Horse Archers L1"/>
+    <ImportUnit ID="Mongol Noble Horse Archers L2"/>
+
     <ImportUnit ID="Mongol Noble Spearmen L1"/>
     <ImportUnit ID="Mongol Noble Spearmen L2"/>
     <ImportUnit ID="Mongol Noble Heavy Cavalry L1"/>
@@ -1261,8 +1284,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="XX Iron Sparrow Hawk Cavalry L1" NameTag="Iron Sparrowhawks" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedHeavySpear_01" Class="Guard" Armor="0"/>
-    <Recruitment Pool="Palace Troops" Cost="500" Upkeep ="50" Era="2" UnitSet="Xi Xia"/>
+    <Recruitment Pool="Palace Troops" Cost="5000" population="4" Upkeep="500" Era="2" UnitSet="Xi Xia"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Armor"/>
       <Tech Item ="Stirrup" Condition="true"/>
       <Building ID="Weapon Smith"/>
@@ -1283,8 +1307,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="XX Foot Sloggers L1" NameTag="Foot Treaders" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_FootTreader_01" Class="Special"/>
-    <Recruitment Pool="Palace Troops" Cost="120" Upkeep ="25" Era="2" UnitSet="Xi Xia"/>
+    <Recruitment Pool="Palace Troops" Cost="1200" population="4" Upkeep="250" Era="2" UnitSet="Xi Xia"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Armorer"/>
     </Requirements>
     <BlockFormation Depth="5" SpacingX="1.4" SpacingY="1.4" Forming="WellFormed"/>
@@ -1382,7 +1407,7 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="Driven Civilians Chinese" NameTag="Driven Civilians" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_DrivenCivilians_01" Class="Levy"/>
-    <Recruitment Pool="Militia" Cost="0" Upkeep ="30" Population="5" Era="2"/>
+    <Recruitment Pool="Militia" Cost="00" Upkeep="300" Population="5" Era="2"/>
     <Requirements>
       <Population Num="20"/>
       <Tech Item="Terror Tactics"/>
@@ -1409,9 +1434,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="Nomad Horde" NameTag="Horde" Category="Settler" NonCombat="true">
     <Banners Main="OE_Banner_Infantry" Mini=""/>
     <Card CardName="G_Stack_Type_Horde_01" Class="Levy"/>
-    <Recruitment Pool="Civilians" Cost="50"  Population="8" Upkeep ="0"/>
+    <Recruitment Pool="Civilians" Cost="500"  population="2" Upkeep="00"/>
     <Requirements>
-      <Population Num ="16"/>
+      <Population Num ="10"/>
       <Tech Item="Iron Wheeled Carts" Condition="true"/>
     </Requirements>
     <Capability Name ="Travelling Horde" Level ="1"/>

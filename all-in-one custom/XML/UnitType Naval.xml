@@ -4,15 +4,16 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation ="OrientalEmpires UnitType.xsd">
 
   <!-- All cost and upkeep values after this will be modified by these percentages -->
-  <CostModifiers Recruitment="140" Upkeep="140"/>
+  <CostModifiers Recruitment="140" Upkeep="1400"/>
 
   <!-- Small River Ship -->
   <Unit ID="Small River Ship" NameTag="Small River Ship" Category="Naval">
     <Banners Main="OE_Banner_Naval" Mini="OE_Banner_SmallPennant"
              MainAttachmentBone="bone_flagMain_01_NS" MiniAttachmentBone="bone_flagSmall"/>
-    <Card CardName="G_Stack_Type_NavalRowing_Lvl1_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Naval" Cost="150" Upkeep ="40"/>
+    <Card CardName="G_Stack_Type_NavalRowing_Lvl1_01" Class="Guard" Armor="0"/>
+    <Recruitment Pool="Naval" Cost="1500" Population="4" Upkeep="400"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Shipyard I"/>
     </Requirements>
     <MultiBlockFormation PaddingRear="2">
@@ -47,8 +48,38 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Crew Name="Crew Archer8" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
       <Crew Name="Crew Archer9" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
       <Crew Name="Crew Archer10" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer11" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer12" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer13" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer14" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer15" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer16" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer17" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer18" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer19" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer20" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer21" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer22" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer23" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer24" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer25" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer26" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer27" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer28" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer29" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer30" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer31" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer32" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer33" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer34" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer35" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer36" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer37" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer38" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer39" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer40" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
     </MultiBlockFormation>
-    <Combat Morale="Regular"/>
+    <Combat Morale="Guard"/>
     <Element Number="1" Type="Ship">
       <Actor ModelName="RSH Chinese Small 1A" Role="Vehicle"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="Small River Ship" />
@@ -75,10 +106,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Actor ModelName="WS Ship Captain"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="None" />
     </Element>
-    <Element Number="10" Type="Infantry">
+    <Element Number="40" Type="Infantry">
       <Actor ModelName="WS Ship Archer"/>
-      <Combat Weapon="Foot Short Sword" Skill="Regular" Armor="Light" />
-      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="-1"/>
+      <Combat Weapon="Foot Short Sword" Skill="Guard" Armor="Light" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="8"/>
     </Element>
 
     <Movement Class="River Boat" MaxCargoSize="1" MaxEmbarkedUnits="1"/>
@@ -88,9 +119,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="Medium River Ship" NameTag="Medium River Ship" Category="Naval">
     <Banners Main="OE_Banner_Naval" Mini="OE_Banner_SmallPennant"
              MainAttachmentBone="bone_flagMain01_NS" MiniAttachmentBone="bone_flagSmall"/>
-    <Card CardName="G_Stack_Type_NavalRowing_Lvl2_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Naval" Cost="150" Upkeep ="40"/>
+    <Card CardName="G_Stack_Type_NavalRowing_Lvl2_01" Class="Guard" Armor="0"/>
+    <Recruitment Pool="Naval" Cost="1500" Population="4" Upkeep="400"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Shipyard II"/>
     </Requirements>
     <MultiBlockFormation PaddingRear="2">
@@ -129,8 +161,38 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Crew Name="Crew Archer8" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
       <Crew Name="Crew Archer9" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
       <Crew Name="Crew Archer10" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer11" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer12" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer13" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer14" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer15" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer16" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer17" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer18" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer19" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer20" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer21" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer22" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer23" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer24" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer25" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer26" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer27" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer28" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer29" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer30" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer31" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer32" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer33" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer34" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer35" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer36" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer37" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer38" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer39" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer40" AttachTo="Ships" ElementIndex="4" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
     </MultiBlockFormation>
-    <Combat Morale="Regular"/>
+    <Combat Morale="Guard"/>
     <Element Number="1" Type="Ship">
       <Actor ModelName="RSH Chinese Medium 1A" Role="Vehicle"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="Medium River Ship" />
@@ -157,10 +219,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Actor ModelName="WS Ship Captain"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="None" />
     </Element>
-    <Element Number="10" Type="Infantry">
+    <Element Number="40" Type="Infantry">
       <Actor ModelName="WS Ship Archer"/>
-      <Combat Weapon="Foot Short Sword" Skill="Regular" Armor="Light" />
-      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="-1"/>
+      <Combat Weapon="Foot Short Sword" Skill="Guard" Armor="Light" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="8"/>
     </Element>
 
     <Movement Class="River Boat" MaxCargoSize="2" MaxEmbarkedUnits="1"/>
@@ -170,9 +232,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="Small Sailing Ship" NameTag="Small Sailing Junk" Category="Naval">
     <Banners Main="OE_Banner_Naval" Mini="OE_Banner_SmallPennant"
              MainAttachmentBone="bone_flagMain_01_NS" MiniAttachmentBone="bone_flagSmall"/>
-    <Card CardName="G_Stack_Type_NavalSail_Lvl1_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Naval" Cost="200" Upkeep ="50"/>
+    <Card CardName="G_Stack_Type_NavalSail_Lvl1_01" Class="Guard" Armor="0"/>
+    <Recruitment Pool="Naval" Population="4" Cost="2000" Upkeep="500"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Shipyard I"/>
       <Tech Item="Junk Sails"/>
     </Requirements>
@@ -193,8 +256,41 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Crew Name="Crew Archer9" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
       <Crew Name="Crew Archer10" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
       <Crew Name="Crew Archer11" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer12" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer13" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer14" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer15" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer16" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer17" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer18" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer19" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer20" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer21" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer22" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer23" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer24" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer25" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer26" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer27" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer28" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer29" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer30" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer31" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer32" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer33" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer34" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer35" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer36" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer37" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer38" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer39" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer40" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer41" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer42" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer43" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer44" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
     </MultiBlockFormation>
-    <Combat Morale="Regular"/>
+    <Combat Morale="Guard"/>
     <Element Number="1" Type="Ship">
       <Actor ModelName="SSH Chinese Small 1A" Role="Vehicle"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="Small Sailing Ship" />
@@ -209,10 +305,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Actor ModelName="WS Ship Captain"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="None" />
     </Element>
-    <Element Number="11" Type="Infantry">
+    <Element Number="44" Type="Infantry">
       <Actor ModelName="WS Ship Archer"/>
-      <Combat Weapon="Foot Short Sword" Skill="Regular" Armor="Light" />
-      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="-1"/>
+      <Combat Weapon="Foot Short Sword" Skill="Guard" Armor="Light" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="8"/>
     </Element>
 
     <Movement Class="Small Ship" MaxCargoSize="1" MaxEmbarkedUnits="1"/>
@@ -222,9 +318,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="Medium Sailing Ship" NameTag="Medium Sailing Junk" Category="Naval">
     <Banners Main="OE_Banner_Naval" Mini="OE_Banner_SmallPennant"
              MainAttachmentBone="bone_flagMain_01_NS" MiniAttachmentBone="bone_flagSmall"/>
-    <Card CardName="G_Stack_Type_NavalSail_Lvl2_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Naval" Cost="300" Upkeep ="60"/>
+    <Card CardName="G_Stack_Type_NavalSail_Lvl2_01" Class="Guard" Armor="0"/>
+    <Recruitment Pool="Naval" Cost="3000" Population="4" Upkeep="600"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Shipyard II"/>
       <Tech Item="Junk Sails"/>
     </Requirements>
@@ -245,6 +342,17 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Crew Name="Crew Archer9" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
       <Crew Name="Crew Archer10" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
       <Crew Name="Crew Archer11" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer12" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer13" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer14" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer15" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer16" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer17" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer18" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer19" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer20" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer21" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer22" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
       <Crew Name="Crew Archer_B01" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_01_NS" Weight="1"/>
       <Crew Name="Crew Archer_B02" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_02_NS" Weight="1"/>
       <Crew Name="Crew Archer_B03" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_03_NS" Weight="1"/>
@@ -257,8 +365,20 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Crew Name="Crew Archer_B10" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_10_NS" Weight="1"/>
       <Crew Name="Crew Archer_B11" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_11_NS" Weight="1"/>
       <Crew Name="Crew Archer_B12" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B13" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B14" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B15" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B16" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B17" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B18" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B19" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B20" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B21" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B22" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B23" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer_B24" AttachTo="Ships" ElementIndex="2" Bone="bone_shipCrew_shooterB_11_NS" Weight="1"/>
     </MultiBlockFormation>
-    <Combat Morale="Regular"/>
+    <Combat Morale="Guard"/>
     <Element Number="1" Type="Ship">
       <Actor ModelName="SSH Chinese Medium 1A" Role="Vehicle"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="Medium Sailing Ship" />
@@ -273,10 +393,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Actor ModelName="WS Ship Captain"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="None" />
     </Element>
-    <Element Number="23" Type="Infantry">
+    <Element Number="46" Type="Infantry">
       <Actor ModelName="WS Ship Archer"/>
-      <Combat Weapon="Foot Short Sword" Skill="Regular" Armor="Light" />
-      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="-1"/>
+      <Combat Weapon="Foot Short Sword" Skill="Guard" Armor="Light" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="8"/>
     </Element>
 
     <Movement Class="Large Ship" MaxCargoSize="2" MaxEmbarkedUnits="1"/>
@@ -286,9 +406,10 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="Small Paddle Wheel Ship" NameTag="Paddle Wheel Boat" Category="Naval">
     <Banners Main="OE_Banner_Naval" Mini="OE_Banner_SmallPennant"
              MainAttachmentBone="bone_flagMain_01_NS" MiniAttachmentBone="bone_flagSmall"/>
-    <Card CardName="G_Stack_Type_NavalPaddle_Lvl1_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Naval" Cost="200" Upkeep ="40"/>
+    <Card CardName="G_Stack_Type_NavalPaddle_Lvl1_01" Class="Guard" Armor="0"/>
+    <Recruitment Pool="Naval" Cost="2000" Population="4" Upkeep="400"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Shipyard II"/>
       <Tech Item="Paddle Wheel"/>
     </Requirements>
@@ -320,8 +441,50 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
       <Crew Name="Crew Archer12" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_12_NS" Weight="1"/>
       <Crew Name="Crew Archer13" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_13_NS" Weight="1"/>
       <Crew Name="Crew Archer14" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_14_NS" Weight="1"/>
+      <Crew Name="Crew Archer15" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer16" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer17" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer18" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer19" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer20" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer21" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer22" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer23" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer24" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer25" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer26" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_12_NS" Weight="1"/>
+      <Crew Name="Crew Archer27" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_13_NS" Weight="1"/>
+      <Crew Name="Crew Archer28" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_14_NS" Weight="1"/>
+      <Crew Name="Crew Archer29" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer30" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer31" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer32" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer33" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer34" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer35" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer36" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer37" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer38" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer39" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer40" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_12_NS" Weight="1"/>
+      <Crew Name="Crew Archer41" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_13_NS" Weight="1"/>
+      <Crew Name="Crew Archer42" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_14_NS" Weight="1"/>
+      <Crew Name="Crew Archer43" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_01_NS" Weight="1"/>
+      <Crew Name="Crew Archer44" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_02_NS" Weight="1"/>
+      <Crew Name="Crew Archer45" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_03_NS" Weight="1"/>
+      <Crew Name="Crew Archer46" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_04_NS" Weight="1"/>
+      <Crew Name="Crew Archer47" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_05_NS" Weight="1"/>
+      <Crew Name="Crew Archer48" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_06_NS" Weight="1"/>
+      <Crew Name="Crew Archer49" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_07_NS" Weight="1"/>
+      <Crew Name="Crew Archer50" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_08_NS" Weight="1"/>
+      <Crew Name="Crew Archer51" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_09_NS" Weight="1"/>
+      <Crew Name="Crew Archer52" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_10_NS" Weight="1"/>
+      <Crew Name="Crew Archer53" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_11_NS" Weight="1"/>
+      <Crew Name="Crew Archer54" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_12_NS" Weight="1"/>
+      <Crew Name="Crew Archer55" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_13_NS" Weight="1"/>
+      <Crew Name="Crew Archer56" AttachTo="Ships" ElementIndex="3" Bone="bone_shipCrew_shooterA_14_NS" Weight="1"/>
     </MultiBlockFormation>
-    <Combat Morale="Regular"/>
+    <Combat Morale="Guard"/>
     <Element Number="1" Type="Ship">
       <Actor ModelName="PWS Chinese Small 1A" Role="Vehicle"/>
       <Combat Weapon="Ship" Skill="Naval" Armor="Small Paddle Wheel Ship" />
@@ -344,8 +507,8 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
     </Element>
     <Element Number="14" Type="Infantry">
       <Actor ModelName="WS Ship Archer"/>
-      <Combat Weapon="Foot Short Sword" Skill="Regular" Armor="Light" />
-      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="-1"/>
+      <Combat Weapon="Foot Short Sword" Skill="Guard" Armor="Light" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" SkillModifier="8"/>
     </Element>
 
     <Movement Class="Paddle Wheel Boat" MaxCargoSize="1" MaxEmbarkedUnits="1"/>

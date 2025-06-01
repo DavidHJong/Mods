@@ -4,7 +4,7 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation ="OrientalEmpires UnitType.xsd">
 
   <!-- All cost and upkeep values after this will be modified by these percentages -->
-  <CostModifiers Recruitment="140" Upkeep="140"/>
+  <CostModifiers Recruitment="140" Upkeep="1400"/>
 
   <!-- //////////////////////////////////////////////////////-->
   <!-- Faction Specific Units ///-->
@@ -13,8 +13,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="WS Qin Mixed L1" NameTag="Qin Mixed Foot" Category="Infantry" >
     <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort"/>
     <Card CardName="G_Stack_Type_MissileCrossbow&amp;Spear_01" Class="Regular" Armor="0"/>
-    <Recruitment Pool="Regulars" Cost="120" Upkeep ="25" Era="1"/>
+    <Recruitment Pool="Regulars" Cost="1200" Population="4" Upkeep="250" Era="1"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Barracks"/>
       <Building ID="Bowyer" UpgradeLevel="1"/>
       <Building ID="Armorer" Condition="false"/>
@@ -90,8 +91,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="WS Crossbow Militia L1" NameTag="Crossbow Militia" Category="Missile">
     <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort"/>
     <Card CardName="G_Stack_Type_MissileCrossbow_01" Class="Levy"/>
-    <Recruitment Pool="Militia" Cost="0" Upkeep ="10" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Militia" Cost="00" Population="4" Upkeep="100" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Bowyer" UpgradeLevel="1"/>
       <Building ID="Armorer" UpgradeLevel="1" Condition="false"/>
     </Requirements>
@@ -135,8 +137,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Horse Archer Militia L1" NameTag="Horse Archer Militia" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArchers_01" Class="Levy" Armor="0"/>
-    <Recruitment Pool="Militia" Cost="0" Upkeep ="20" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Militia" Cost="00" Population="4" Upkeep="200" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Edict Item="Ride Like a Barbarian"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
@@ -177,8 +180,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Picked Horse Archer L1" NameTag="Picked Horse Archers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArchers_01" Class="Special" Armor="0"/>
-    <Recruitment Pool="Palace Troops" Cost="150" Upkeep ="25" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Palace Troops" Cost="1500" Population="4" Upkeep="250" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Edict Item="Ride Like a Barbarian"/>
       <Tech Item="Horse Archery"/>
       <Building ID="Bowyer"/>
@@ -219,8 +223,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Noble Horse Archers L1" NameTag="Noble Horse Archers" Category="Cavalry">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_MountedArcherHeavy_01" Class="Noble" Armor="0"/>
-    <Recruitment Pool="Nobles" Cost="0" Upkeep ="25" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Nobles" Cost="00" Population="4" Upkeep="250" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Horse Archery"/>
       <Edict Item="Ride Like a Barbarian"/>
       <Building ID="Bowyer"/>
@@ -251,8 +256,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="WS Picked Heavy Infantry L1" NameTag="Picked Heavy Infantry" Category="Missile">
     <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort"/>
     <Card CardName="G_Stack_Type_MeleeHalberd_01" Class="Special"/>
-    <Recruitment Pool="Regulars" Cost="120" Upkeep ="30" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Regulars" Cost="1200" Population="4" Upkeep="300" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID ="Barracks"/>
       <Building ID="Weapon Smith"/>
       <Building ID="Bowyer" UpgradeLevel="1"/>
@@ -289,8 +295,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="WS Heavy Spear Militia L1" NameTag="Heavy Spear Militia" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MeleeSpearLongShieldTall_01" Class="Levy"/>
-    <Recruitment Pool="Militia" Cost="0" Upkeep ="10" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Militia" Cost="00" Population="4" Upkeep="100" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Armorer" Condition="false"/>
     </Requirements>
     <StaticRequirements>
@@ -332,8 +339,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID="EBA Tiger Guards" NameTag="Tiger Guards" Category="Infantry">
     <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble"/>
     <Card CardName="G_Stack_Type_MeleeAxeLong_01" Class="Guard"/>
-    <Recruitment Pool="Palace Troops" Cost="100" Upkeep ="25" Era="0" UnitSet="Chinese"/>
+    <Recruitment Pool="Palace Troops" Cost="1000" Population="4" Upkeep="250" Era="0" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Building ID="Armorer"/>
       <Building ID="Weapon Smith"/>
     </Requirements>
@@ -359,8 +367,9 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Unit ID ="WS Five Family Chariots" NameTag="Five Family Chariots" Category="Chariot">
     <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong"/>
     <Card CardName="G_Stack_Type_ChariotHeavy_01" Class="Guard"/>
-    <Recruitment Pool="Palace Troops" Cost="250" Upkeep ="40" Era="1" UnitSet="Chinese"/>
+    <Recruitment Pool="Palace Troops" Cost="2500" Population="4" Upkeep="400" Era="1" UnitSet="Chinese"/>
     <Requirements>
+      <Population Num ="10"/>
       <Tech Item="Four Horse Chariot" Condition="true"/>
     </Requirements>
     <StaticRequirements>
