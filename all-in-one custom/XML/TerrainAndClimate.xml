@@ -7,11 +7,11 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
   <Season ID="Winter">
     <Light Intensity = "1.05">
       <Color R ="226" G="238" B="255"/>
-      <Direction X ="35" Y="225" Z="355"/>
+      <Direction X ="35" Y="0" Z="355"/>
       <UpperHemisphereColor R="116" G="121" B="124" />
       <LowerHemisphereColor R="116" G="121" B="124" />
     </Light>
-    <Ambient R="116" G="121" B="124"/>
+    <Ambient R="180" G="185" B="189"/>
     <Fog Height ="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
       <Color R ="175" G="185" B="194"/>
     </Fog>
@@ -19,13 +19,13 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
     <ColorCorrection Texture="Effects/Textures/color correction ramp_winter"/>
   </Season>
   <Season ID="Spring">
-    <Light Intensity = "1.05">
+    <Light Intensity = "1.25">
       <Color R ="255" G="254" B="244"/>
-      <Direction X ="35" Y="225" Z="355"/>
+      <Direction X ="35" Y="0" Z="355"/>
       <UpperHemisphereColor R="116" G="121" B="124" />
       <LowerHemisphereColor R="89" G="126" B="91" />
     </Light>
-    <Ambient R="116" G="121" B="124"/>
+    <Ambient R="180" G="185" B="189"/>
     <Fog Height ="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
       <Color R ="172" G="189" B="202"/>
     </Fog>
@@ -33,13 +33,13 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
     <ColorCorrection Texture="Effects/Textures/color correction ramp_spring"/>
   </Season>
   <Season ID="Summer">
-    <Light Intensity = "1.15">
+    <Light Intensity = "1.45">
       <Color R ="255" G="227" B="166"/>
-      <Direction X ="35" Y="225" Z="355"/>
+      <Direction X ="35" Y="0" Z="355"/>
       <UpperHemisphereColor R="116" G="121" B="124" />
       <LowerHemisphereColor R="89" G="126" B="91" />
     </Light>
-    <Ambient R="116" G="121" B="124"/>
+    <Ambient R="180" G="185" B="189"/>
     <Fog Height ="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
       <Color R ="170" G="188" B="200"/>
     </Fog>
@@ -47,13 +47,13 @@ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
     <ColorCorrection Texture="Effects/Textures/color correction ramp_summer"/>
   </Season>
   <Season ID="Autumn">
-    <Light Intensity = "1.05">
+    <Light Intensity = "1.25">
       <Color R ="255" G="240" B="232"/>
-      <Direction X ="35" Y="225" Z="355"/>
+      <Direction X ="35" Y="0" Z="355"/>
       <UpperHemisphereColor R="116" G="121" B="124" />
       <LowerHemisphereColor R="89" G="126" B="91" />
     </Light>
-    <Ambient R="116" G="121" B="124"/>
+    <Ambient R="180" G="185" B="189"/>
     <Fog Height ="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
       <Color R ="177" G="190" B="209"/>
     </Fog>
